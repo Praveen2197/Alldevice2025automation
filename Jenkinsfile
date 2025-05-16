@@ -1,6 +1,11 @@
 pipeline {
     agent any
 
+    environment {
+        JAVA_HOME = 'C:\\Program Files\\Java\\jdk-21'
+        PATH = "${env.JAVA_HOME}\\bin;${env.PATH}"
+    }
+
     stages {
         stage('Checkout') {
             steps {
@@ -16,7 +21,7 @@ pipeline {
 
         stage('Run Multi-Device Test') {
             steps {
-                bat 'mvn test -DsuiteXmlFile=src/test/resources/testng.xml'
+                bat 'mvn test -DsuiteXmlFile=testng.xml'
             }
         }
     }
