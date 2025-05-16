@@ -45,9 +45,6 @@ import io.qameta.allure.testng.AllureTestNg;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
-import static Allcodeusa.externalDeviceVideo.StopCamera;
-import static Allcodeusa.externalDeviceVideo.launchCamera;
-
 @Listeners({AllureTestNg.class})
 public class AllDeviceAutomationUS extends appiumService{
 	
